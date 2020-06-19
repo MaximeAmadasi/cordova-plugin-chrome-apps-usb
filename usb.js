@@ -70,6 +70,26 @@ exports.listInterfaces = function(handle, callback) {
       );
 };
 
+exports.getConfiguration = function(handle, callback) {
+  cordova.exec(
+      function(interfaceDescriptors) {
+        interfaceDescriptors.forEach(function (interfaceDescriptor) {
+            interfaceDescriptor.extra_data = base64.toArrayBuffer(interfaceDescriptor.extra_data);
+        });
+        const configDescriptor = {
+          interfaces: interfaceDescriptors
+        };
+        callback(configDescriptor);
+      },  // successCallback
+      function(msg) {  // errorCallback
+        callbackWithError('List interfaces failed: ' + msg, callback, []);
+      },
+      'ChromeUsb',
+      'listInterfaces',
+      [{handle:handle.handle}]
+      );
+};
+
 exports.claimInterface = function(handle, interfaceNumber, callback) {
   if (typeof interfaceNumber != "number") {
     // List interfaces returns an object, the caller must extract the number
