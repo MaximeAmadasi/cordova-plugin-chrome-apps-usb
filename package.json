@@ -1,6 +1,6 @@
 {
   "name": "bf-cordova-plugin-chrome-apps-usb",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "This plugin provides USB connectivity for Android.",
   "cordova": {
     "id": "bf-cordova-plugin-chrome-apps-usb",
