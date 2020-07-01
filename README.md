@@ -1,3 +1,5 @@
+# Note: This plugin is used by the [Betaflight Configurator](https://github.com/betaflight/betaflight-configurator) and may not be suitable for other uses
+
 # chrome.usb Plugin
 
 This plugin provides USB connectivity for Android.
