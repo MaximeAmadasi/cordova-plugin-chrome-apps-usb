@@ -5,8 +5,8 @@
   found in the LICENSE file.
 -->
 <plugin xmlns="http://cordova.apache.org/ns/plugins/1.0"
-    id="cordova-plugin-chrome-apps-usb"
-    version="1.2.1-dev">
+    id="bf-cordova-plugin-chrome-apps-usb"
+    version="2.0.0">
   <engines>
     <engine name="cordova-android" version=">=4" />
   </engines>
